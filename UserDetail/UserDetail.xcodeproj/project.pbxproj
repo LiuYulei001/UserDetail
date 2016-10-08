@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		362432191DA8BE22006CD7BE /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 362432171DA8BE22006CD7BE /* UserCell.m */; };
+		3624321A1DA8BE22006CD7BE /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362432181DA8BE22006CD7BE /* UserCell.xib */; };
 		36888BE91DA893FE00B8FAE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36888BE81DA893FE00B8FAE7 /* main.m */; };
 		36888BEC1DA893FE00B8FAE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36888BEB1DA893FE00B8FAE7 /* AppDelegate.m */; };
 		36888BEF1DA893FE00B8FAE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36888BEE1DA893FE00B8FAE7 /* ViewController.m */; };
@@ -47,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		362432161DA8BE22006CD7BE /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
+		362432171DA8BE22006CD7BE /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
+		362432181DA8BE22006CD7BE /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		36888BE41DA893FE00B8FAE7 /* UserDetail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserDetail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36888BE81DA893FE00B8FAE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36888BEA1DA893FE00B8FAE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +176,9 @@
 			children = (
 				36888C1B1DA8961F00B8FAE7 /* NaView.h */,
 				36888C1C1DA8961F00B8FAE7 /* NaView.m */,
+				362432161DA8BE22006CD7BE /* UserCell.h */,
+				362432171DA8BE22006CD7BE /* UserCell.m */,
+				362432181DA8BE22006CD7BE /* UserCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,6 +319,7 @@
 				36FB30EB1DA8A0E300451ABC /* back.png in Resources */,
 				36FB30ED1DA8A0E300451ABC /* edit@2x.png in Resources */,
 				36FB30EC1DA8A0E300451ABC /* cell.png in Resources */,
+				3624321A1DA8BE22006CD7BE /* UserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +347,7 @@
 				36888BEF1DA893FE00B8FAE7 /* ViewController.m in Sources */,
 				36888C1D1DA8961F00B8FAE7 /* NaView.m in Sources */,
 				36888BEC1DA893FE00B8FAE7 /* AppDelegate.m in Sources */,
+				362432191DA8BE22006CD7BE /* UserCell.m in Sources */,
 				36888BE91DA893FE00B8FAE7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

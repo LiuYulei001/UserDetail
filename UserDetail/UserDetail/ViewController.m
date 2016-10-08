@@ -13,8 +13,11 @@
 
 #define kColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 
+#define UserCellIdetifeir @"UserCell"
+
 #import "ViewController.h"
 #import "NaView.h"
+#import "UserCell.h"
 
 
 
@@ -63,7 +66,7 @@
     
     _dataArray =[[NSMutableArray alloc]init];
     
-    for (int i=0; i<10; i++) {
+    for (int i = 0; i < 20; i++) {
         
         NSString * string=[NSString stringWithFormat:@"第%d行",i];
         
@@ -75,8 +78,7 @@
 
 -(void)backImageView{
     UIImage *image=[UIImage imageNamed:@"back"];
-    //图片的宽度设为屏幕的宽度，高度自适应
-    NSLog(@"%f",image.size.height);
+    
     _backgroundImgV=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, image.size.height*0.8)];
     _backgroundImgV.image=image;
     _backgroundImgV.userInteractionEnabled=YES;
@@ -94,6 +96,7 @@
         _tableView.dataSource=self;
         _tableView.delegate=self;
         _tableView.tableFooterView = [[UIView alloc] init];
+        [_tableView registerNib:[UINib nibWithNibName:UserCellIdetifeir bundle:nil] forCellReuseIdentifier:UserCellIdetifeir];
         [self.view addSubview:_tableView];
     }
     [_tableView setTableHeaderView:[self headImageView]];
@@ -157,11 +160,6 @@
 
 
 #pragma mark ---- UITableViewDelegate
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 120;
-}
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
@@ -171,18 +169,15 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString *reusID=@"ID";
     
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:reusID];
     
-    if (!cell) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reusID];
-    }
-    cell.textLabel.text=[_dataArray objectAtIndex:indexPath.row];
+    UserCell *cell = [tableView dequeueReusableCellWithIdentifier:UserCellIdetifeir forIndexPath:indexPath];
     
-    cell.detailTextLabel.text=[_dataArray objectAtIndex:indexPath.row];
+    cell.lab_text = [_dataArray objectAtIndex:indexPath.row];
     
-    [cell.imageView setImage:[UIImage imageNamed:@"cell"]];
+    cell.img_name = @"cell";
+    
+    
     
     return cell;
 }
