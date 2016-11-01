@@ -222,6 +222,21 @@
         
     }
     
+//    if (scrollView.contentOffset.y <= 0) {
+//        self.NavView.headBackView.alpha = ((240+scrollView.contentOffset.y)/140);
+//        _NavView.left_bt_Image = kMenuBTimg;
+//        _NavView.right_bt_Image = kSearchBTimg;
+//        _NavView.lab_alpha = _NavView.headBackView.alpha;
+//
+//        if (self.NavView.headBackView.alpha >= 1) {
+//
+//            _NavView.lab_alpha = 1;
+//            _NavView.headBackView.alpha = 1;
+//            _NavView.left_bt_Image = kMenuBTimg;
+//            _NavView.right_bt_Image = kSearchBTimg;
+//        }
+//    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
